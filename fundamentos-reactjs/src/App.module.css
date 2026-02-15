@@ -1,20 +1,24 @@
 .wrapper {
-  max-width: 70rem;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  max-width: 70rem;        /* largura máxima do container (limita o tamanho em telas grandes) */
+  margin: 2rem auto;       /* espaço em cima/baixo de 2rem e centraliza horizontalmente (auto) */
+  padding: 0 1rem;         /* espaço interno nas laterais para o conteúdo não grudar nas bordas */
 
-  display: grid;
-  grid-template-columns: 256px 1fr;
-  gap: 2rem;
-  align-items: flex-start;
+  display: grid;           /* transforma o wrapper em um container de GRID (linhas e colunas) */
+  grid-template-columns: 256px 1fr; /* cria 2 colunas: 
+                                       - primeira fixa com 256px (ex: sidebar)
+                                       - segunda ocupa o resto do espaço disponível */
+  gap: 2rem;               /* espaço entre as colunas/linhas do grid */
+  align-items: flex-start; /* alinha os itens do grid no topo (não estica na vertical) */
 }
 
+/* regra aplicada quando a tela tiver até 768px de largura (celulares/tablets) */
 @media (max-width: 768px) {
+
   html {
-    font-size: 87.5%;
+    font-size: 87.5%;      /* diminui um pouco o tamanho base da fonte para caber melhor em telas pequenas */
   }
 
   .wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* muda para apenas 1 coluna, deixando tudo empilhado (layout mobile) */
   }
 }
