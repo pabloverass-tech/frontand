@@ -1,5 +1,5 @@
 {
-  "name": "01-fundamentos-reactjs-ts",
+  "name": "02-ignite-timer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "date-fns": "^4.1.0",
+    "immer": "^11.1.4",
     "phosphor-react": "^1.4.1",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-hook-form": "^7.71.1",
+    "react-router-dom": "^7.13.0",
+    "Router": "^2.1.0",
+    "styled-components": "^6.3.9",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

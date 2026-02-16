@@ -1,0 +1,27 @@
+/* Container principal que envolve Sidebar + conteúdo */
+.wrapper {
+  max-width: 70rem;      /* Define largura máxima do layout */
+  margin: 2rem auto;     /* Centraliza horizontalmente e adiciona espaço em cima/baixo */
+  padding: 0 1rem;       /* Espaço interno nas laterais */
+
+  display: grid;         /* Usa CSS Grid para organizar os elementos */
+  grid-template-columns: 256px 1fr; /* 2 colunas: 
+                                       - 256px (Sidebar)
+                                       - 1fr (conteúdo principal ocupando o resto) */
+  gap: 2rem;             /* Espaço entre as colunas */
+  align-items: flex-start; /* Alinha os itens no topo */
+}
+
+/* Regras para telas menores (responsividade) */
+@media (max-width: 768px) {
+
+  /* Diminui o tamanho base da fonte para caber melhor no mobile */
+  html {
+    font-size: 87.5%;
+  }
+
+  /* No celular, muda de 2 colunas para apenas 1 coluna */
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+}
