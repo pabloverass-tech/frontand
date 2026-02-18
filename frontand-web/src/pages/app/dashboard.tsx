@@ -1,10 +1,7 @@
-import { Helmet } from "react-helmet-async";
+import { usePageTitle } from "@/hooks/use-page-title"
 
 export function Dashboard() {
-  return (
-    <>
-      <Helmet title="Dashboard" />
-      <h1>Dashboard</h1>
-    </>
-  );
+  usePageTitle("Dashboard")
+
+  return <h1>Dashboard</h1>
 }

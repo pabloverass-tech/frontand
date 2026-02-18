@@ -1,11 +1,17 @@
+import { Header } from "@/components/header"
+import { usePageTitle } from "@/hooks/use-page-title"
+
 import { Outlet } from "react-router-dom"
 
 export function AppLayout() {
+    usePageTitle("Dashboard")
     return (
         <div>
-            <h1>Cabeçalho</h1>
+            <div className="flex min-h-screen flex-col antialiased">
+                <Header />
+            </div>
 
-            <div>
+            <div className="flex flex-1 flex-col gap-4 p-8 pt-6">
                 <Outlet />
             </div>
         </div>
