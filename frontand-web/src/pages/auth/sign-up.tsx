@@ -26,7 +26,7 @@ export function SignUp() {
     resolver: zodResolver(signUpSchema),
   });
 
-  async function handleSignUp(data: SignUpForm) {
+  async function handleSignUp(_data: SignUpForm) {
     try {
       // simulação de requisição
       await new Promise((resolve) => setTimeout(resolve, 1200));
