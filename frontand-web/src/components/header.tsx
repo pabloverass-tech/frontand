@@ -1,6 +1,8 @@
 import { Home, Pizza, UtensilsCrossed, ChevronDown } from "lucide-react"
-import { Link } from "react-router-dom"
 import { Separator } from "@/components/ui/separator"
+import { NavLink } from "./nav-link"
+import { ThemeToggle } from "./theme/theme-toogle"
+import { AccountMenu } from "./account-menu"
 
 export function Header() {
   return (
@@ -19,13 +21,13 @@ export function Header() {
           <nav className="flex items-center gap-2">
 
             {/* Início */}
-            <Link
+            <NavLink
               to="/"
               className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground"
             >
               <Home className="h-4 w-4" />
               Início
-            </Link>
+            </NavLink>
 
             {/* Pedidos com submenu */}
             <div className="relative group">
@@ -48,34 +50,38 @@ export function Header() {
                   group-hover:opacity-100 group-hover:translate-y-0 group-hover:scale-100
                 "
               >
-                <Link
+                <NavLink
                   to="/orders"
                   className="block rounded-sm px-3 py-2 text-sm hover:bg-muted"
                 >
                   Todos os pedidos
-                </Link>
+                </NavLink>
 
-                <Link
+                <NavLink
                   to="/orders/pending"
                   className="block rounded-sm px-3 py-2 text-sm hover:bg-muted"
                 >
                   Pendentes
-                </Link>
+                </NavLink>
 
-                <Link
+                <NavLink
                   to="/orders/completed"
                   className="block rounded-sm px-3 py-2 text-sm hover:bg-muted"
                 >
                   Concluídos
-                </Link>
+                </NavLink>
               </div>
             </div>
           </nav>
         </div>
 
         {/* Avatar */}
-        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
+        {/* <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground">
           P
+        </div> */}
+        <div className="ml-auto flex items-center gap-2">
+          <ThemeToggle />
+          <AccountMenu />
         </div>
       </div>
     </header>
