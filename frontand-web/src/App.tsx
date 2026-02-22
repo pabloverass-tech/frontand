@@ -9,7 +9,7 @@ import { ThemeProvider } from "./components/theme/theme-provider";
 export function App() {
   return (
     <>
-      <ThemeProvider defaultTheme="dark" storageKey="layout_novo-theme">
+      <ThemeProvider defaultTheme="light" storageKey="layout_novo_theme">
         <RouterProvider router={router} />
         <Toaster richColors  />
       </ThemeProvider>

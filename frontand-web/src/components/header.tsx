@@ -29,6 +29,14 @@ export function Header() {
               Início
             </NavLink>
 
+             <NavLink
+              to="/orders"
+              className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground"
+            >
+              <Home className="h-4 w-4" />
+              Pedido
+            </NavLink>
+
             {/* Pedidos com submenu */}
             <div className="relative group">
               <button className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition hover:bg-muted hover:text-foreground">
