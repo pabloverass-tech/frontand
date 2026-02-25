@@ -3,7 +3,7 @@
 import { TableCell, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { OrderDetails } from "./order-details";
 
 type Status = "approved" | "pending" | "canceled";
@@ -41,7 +41,7 @@ export function OrderTableRow({
             </Button>
           </DialogTrigger>
 
-          <OrderDetails orderId={""} open={false}/>
+          <OrderDetails/>
         </Dialog>
       </TableCell>
 

@@ -23,7 +23,7 @@ export function Dashboard() {
       {/* ================= HEADER ================= */}
       <div>
         <h1 className="text-3xl font-bold tracking-tight">
-          Dashboard
+          Dashboard 222
         </h1>
         <p className="text-muted-foreground text-sm">
           Visão geral de desempenho do seu negócio

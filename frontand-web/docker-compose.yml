@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  react-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: react-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+  react-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: react-prod
+    ports:
+      - "3000:80" 
