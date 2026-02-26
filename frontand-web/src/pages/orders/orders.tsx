@@ -24,6 +24,7 @@ import {
 } from "lucide-react";
 import { OrderTableRow } from "./order-table-row";
 import { OrderTableFilter } from "./order-table-filter";
+import { Pagination } from "@/components/pagination";
 // import { Pagination } from "@/components/pagination";
 
 /* ================= TIPOS ================= */
@@ -167,7 +168,9 @@ export function Orders() {
           </TableBody>
         </Table>
       </div>
-          {/* <Pagination /> */}
+          <Pagination pageIndex={0} totalCount={0} perPage={0} onPageChange={function (pageIndex: number): Promise<void> | void {
+        throw new Error("Function not implemented.");
+      } } />
     </div>
   );
 }
